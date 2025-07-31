@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Research Assistant -  Research Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Premium Background Effects -->
+    <div class="premium-bg">
+        <div class="floating-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+        </div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <span>AI Research Assistant</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#research" class="nav-link">
+                    <i class="fas fa-microscope"></i>
+                    <span>Research</span>
+                </a>
+                <a href="#about" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+            <div class="hero-glow"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">AI-Powered</span><br>
+                    Research Assistant
+                </h1>
+                <p class="hero-subtitle">
+                    Transform your research process with  artificial intelligence. 
+                    Get comprehensive insights, detailed analysis, and professional reports in minutes.
+                </p>
+                <a href="#research" class="cta-button">
+                    <i class="fas fa-rocket"></i>
+                    <span>Start Research Now</span>
+                </a>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image">
+                    <div class="floating-card card-1">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span>Data Analysis</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <span>Deep Research</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <span>Reports</span>
+                    </div>
+                    <div class="main-illustration">
+                        <div class="ai-brain">
+                            <i class="fas fa-brain"></i>
+                            <div class="brain-particles">
+                                <div class="particle"></div>
+                                <div class="particle"></div>
+                                <div class="particle"></div>
+                                <div class="particle"></div>
+                            </div>
+                        </div>
+                        <div class="connection-lines"></div>
+                        <div class="neural-network">
+                            <div class="neuron"></div>
+                            <div class="neuron"></div>
+                            <div class="neuron"></div>
+                            <div class="neuron"></div>
+                            <div class="neuron"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="research-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-microscope"></i>
+                    <span>Research Hub</span>
+                </div>
+                <h2>Start Your Research Journey</h2>
+                <p>Enter any topic and watch our AI transform it into comprehensive insights</p>
+            </div>
+            
+            <div class="research-container">
+                <div class="research-card">
+                    <div class="research-header">
+                        <div class="research-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h3>Research Topic</h3>
+                    </div>
+                    
+                    <form id="researchForm" class="research-form">
+                        <div class="input-group">
+                            <label for="topic">
+                                <i class="fas fa-lightbulb"></i>
+                                What would you like to research?
+                            </label>
+                            <div class="input-wrapper">
+                                <input 
+                                    type="text" 
+                                    id="topic" 
+                                    name="topic" 
+                                    placeholder="e.g., Artificial Intelligence in Healthcare"
+                                    required
+                                >
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span class="btn-text">
+                                <i class="fas fa-search"></i>
+                                Start Research
+                            </span>
+                            <div class="loading-spinner" id="loadingSpinner"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reports Section -->
+    <section class="reports-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Reports</span>
+                </div>
+                <h2>Generated Reports</h2>
+                <p>Access detailed, professional reports from your research</p>
+            </div>
+            
+            <div class="reports-grid">
+                <div class="report-card" data-report-type="research_findings">
+                    <div class="report-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Research Findings</h3>
+                    <p>Key discoveries and insights from your research topic</p>
+                    <div class="report-features">
+                        <span><i class="fas fa-check"></i> Important Statistics</span>
+                        <span><i class="fas fa-check"></i> Expert Opinions</span>
+                        <span><i class="fas fa-check"></i> Sources Used</span>
+                    </div>
+                                            <button class="report-btn" onclick="loadReport('research_findings')">
+                            <i class="fas fa-eye"></i>
+                            View Report
+                        </button>
+                </div>
+                
+                <div class="report-card" data-report-type="analysis_report">
+                    <div class="report-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Analysis Report</h3>
+                    <p>Detailed analysis and evaluation of research data</p>
+                    <div class="report-features">
+                        <span><i class="fas fa-check"></i> Trend Analysis</span>
+                        <span><i class="fas fa-check"></i> Implications and Significance</span>
+                        <span><i class="fas fa-check"></i> Expert Interpretation*</span>
+                    </div>
+                                            <button class="report-btn" onclick="loadReport('analysis_report')">
+                            <i class="fas fa-eye"></i>
+                            View Report
+                        </button>
+                </div>
+                
+                <div class="report-card" data-report-type="final_report">
+                    <div class="report-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Final Report</h3>
+                    <p>Comprehensive final summary and conclusions</p>
+                    <div class="report-features">
+                        <span><i class="fas fa-check"></i> Executive Summary</span>
+                        <span><i class="fas fa-check"></i> Main Findings</span>
+                        <span><i class="fas fa-check"></i> Conclusions and Recommendations</span>
+                    </div>
+                                            <button class="report-btn" onclick="loadReport('final_report')">
+                            <i class="fas fa-eye"></i>
+                            View Report
+                        </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-badge">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About Us</span>
+                    </div>
+                    <h2>About Our AI Research Assistant</h2>
+                    <p>We've built advanced AI-powered research assistant to help researchers, students, and professionals discover insights faster than ever before.</p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <div class="stat-info">
+                                <h4>3</h4>
+                                <p>Multi Agent System</p>
+                            </div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="stat-info">
+                                <h4>3</h4>
+                                <p>Reports Generated</p>
+                            </div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="stat-info">
+                                <h4>LLM</h4>
+                                <p>Sonar model</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <i class="fas fa-brain"></i>
+                            <span>AI/ML</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>key reports</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Cloud</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Security</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Report Modal -->
+    <div id="reportModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Report</h2>
+                <button class="close-btn" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="modalContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-brain"></i>
+                        <span>AI Research Assistant</span>
+                    </div>
+                    <p>Transforming research with the power of artificial intelligence.</p>
+                    <div class="social-links">
+                        <a href="https://x.com/TazeemA64311631"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/tazeem-abbas/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/syed-gufran"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>TEAM</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/aditi-sharma-a657b2331/">ADITI SHARMA</a></li>
+                        <li><a href="https://www.linkedin.com/in/samarth91/">SAMARTH NEGI</a></li>
+                        <li><a href="https://www.linkedin.com/in/shubhanshu-singh-fartyal-7a91b9292/">SHUBHANSHU SINGH FARTYAL</a></li>
+                        <li><a href="https://www.linkedin.com/in/tazeem-abbas/">SYED GUFRAN HUSSAIN</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>AGENTS</h4>
+                    <ul>
+                        <li><a href="#">🔍 Research Specialist</a></li>
+                        <li><a href="#">📊 Data Analyst</a></li>
+                        <li><a href="#">✍️ Content Writer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>LLM</h4>
+                    <ul>
+                        <li><a href="https://sonar.perplexity.ai">sonar-reasoning</a></li>
+                        <li><a href="https://sonar.perplexity.ai">sonar-pro</a></li>
+                        <li><a href="https://sonar.perplexity.ai">sonar-deep-research</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;  AI Research Assistant. Powered by perplexity AI .</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
